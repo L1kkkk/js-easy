@@ -2,9 +2,9 @@
 //  при цьому пропускаючи всі цифри.
 
 function reverseWithoutNumbers(str) {
-  // Ваш код тут
+  let filteredStr = str.split('').filter(char => !/\d/.test(char));
+  return filteredStr.reverse().join('');
 }
-
 console.log(reverseWithoutNumbers("hello123world456")); // Виведе: "dlrowolleh"
 console.log(reverseWithoutNumbers("abc123xyz"));       // Виведе: "zyxabc"
 
